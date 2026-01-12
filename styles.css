@@ -1,0 +1,364 @@
+/* =====================
+   RESET + BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f4f4;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* =====================
+   UTILITÁRIOS
+===================== */
+.header__container,
+.hero__container,
+.product-info__container,
+.target-audience__container,
+.trust__container,
+.products__container,
+.faq__container,
+.cta__container,
+.footer__container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  background: #000;
+  padding: 24px 0;
+}
+
+.header__logo {
+  color: #fff;
+  font-size: 1.4rem;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  background: #fff;
+  padding: 140px 0 120px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hero__headline {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hero__subheadline {
+  max-width: 560px;
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.hero__trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero__trust-item {
+  padding-left: 14px;
+  border-left: 3px solid #111;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   PRODUCT INFO
+===================== */
+.product-info {
+  background: #f4f4f4;
+  padding: 100px 0;
+}
+
+.product-info__title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.product-info__text {
+  max-width: 700px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* =====================
+   TARGET AUDIENCE
+===================== */
+.target-audience {
+  background: #fff;
+  padding: 100px 0;
+}
+
+.target-audience__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.target-audience__item {
+  background: #f7f7f7;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.target-audience__item-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.target-audience__item-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* =====================
+   TRUST
+===================== */
+.trust {
+  background: #111;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.trust__title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.trust__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.trust__item-title {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.trust__item-text {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* =====================
+   PRODUCTS
+===================== */
+.products {
+  background: #f4f4f4;
+  padding: 100px 0;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 36px;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.product-card__title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.product-card__weight {
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.product-card__button {
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.product-card__button:hover {
+  background: #000;
+}
+
+/* =====================
+   FAQ
+===================== */
+.faq {
+  background: #fff;
+  padding: 100px 0;
+}
+
+.faq__item {
+  border-bottom: 1px solid #ddd;
+  padding: 24px 0;
+}
+
+.faq__question {
+  font-weight: 500;
+}
+
+.faq__answer {
+  margin-top: 12px;
+  color: #444;
+}
+
+/* =====================
+   CTA
+===================== */
+.cta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 120px 24px;
+}
+
+.cta__title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.cta__text {
+  max-width: 520px;
+  margin: 0 auto 32px;
+  color: #ccc;
+}
+
+.cta__button {
+  padding: 16px 40px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cta__button:hover {
+  background: #eaeaea;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: #000;
+  color: #aaa;
+  padding: 40px 24px;
+  font-size: 0.85rem;
+}
+
+.footer__nav {
+  margin-top: 12px;
+}
+
+.footer__link {
+  color: #aaa;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: #fff;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 768px) {
+  .hero__headline {
+    font-size: 2.3rem;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+}
+/* =====================
+   HERO GRID
+===================== */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero__image img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   PRODUCT IMAGE BLOCK
+===================== */
+.product-info__content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.product-info__image img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* =====================
+   PRODUCT CARDS IMAGE
+===================== */
+.product-card img {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+/* =====================
+   TRUST VISUAL
+===================== */
+.trust__item {
+  background: rgba(255,255,255,0.03);
+  padding: 28px;
+  border-radius: 4px;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 900px) {
+  .hero__grid,
+  .product-info__content {
+    grid-template-columns: 1fr;
+  }
+}
