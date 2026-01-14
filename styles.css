@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #f4f4f4;
-  color: #111;
+  font-family: 'Montserrat', Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0A0A0A;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -41,35 +41,41 @@ body {
 .header {
   background: #000;
   padding: 24px 0;
+  text-align: center;
 }
 
 .header__logo {
-  color: #fff;
-  font-size: 1.4rem;
-  letter-spacing: 0.25em;
-  font-weight: 600;
+  height: 80px;
+  width: auto;
+  filter: brightness(0) invert(1); /* logo branco se precisar */
 }
 
 /* =====================
    HERO
 ===================== */
 .hero {
-  background: #fff;
-  padding: 140px 0 120px;
-  border-bottom: 1px solid #e5e5e5;
+  background: #111;
+  padding: 120px 0 100px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
 .hero__headline {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
 
 .hero__subheadline {
-  max-width: 560px;
-  font-size: 1.05rem;
-  color: #333;
+  max-width: 520px;
+  font-size: 1.1rem;
+  color: #ccc;
   margin-bottom: 40px;
 }
 
@@ -82,35 +88,71 @@ body {
 
 .hero__trust-item {
   padding-left: 14px;
-  border-left: 3px solid #111;
+  border-left: 3px solid #C0C0C0; /* prata metálica */
   font-size: 0.95rem;
+  color: #ccc;
+}
+
+.hero__cta {
+  padding: 16px 40px;
+  background: #C0C0C0;
+  color: #111;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.3s ease;
+}
+
+.hero__cta:hover {
+  background: #fff;
 }
 
 /* =====================
    PRODUCT INFO
 ===================== */
 .product-info {
-  background: #f4f4f4;
+  background: #0A0A0A;
   padding: 100px 0;
 }
 
 .product-info__title {
-  font-size: 2rem;
-  margin-bottom: 24px;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.product-info__text {
-  max-width: 700px;
-  color: #333;
+.product-info__content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.product-info__text-block p {
+  font-size: 1rem;
+  color: #ccc;
   margin-bottom: 16px;
+}
+
+.product-info__image img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* =====================
    TARGET AUDIENCE
 ===================== */
 .target-audience {
-  background: #fff;
+  background: #111;
   padding: 100px 0;
+}
+
+.target-audience__title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .target-audience__list {
@@ -121,33 +163,40 @@ body {
 }
 
 .target-audience__item {
-  background: #f7f7f7;
+  background: rgba(255,255,255,0.05);
   padding: 32px;
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.target-audience__item-title {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+.target-audience__item:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-5px);
 }
 
-.target-audience__item-text {
+.target-audience__item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.target-audience__item p {
+  color: #ccc;
   font-size: 0.95rem;
-  color: #444;
 }
 
 /* =====================
    TRUST
 ===================== */
 .trust {
-  background: #111;
-  color: #fff;
+  background: #0F0F0F;
   padding: 100px 0;
+  color: #ccc;
 }
 
 .trust__title {
-  font-size: 2rem;
-  margin-bottom: 40px;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .trust__list {
@@ -157,22 +206,41 @@ body {
   gap: 32px;
 }
 
-.trust__item-title {
-  font-size: 1.05rem;
-  margin-bottom: 6px;
+.trust__list li {
+  background: rgba(255,255,255,0.05);
+  padding: 32px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.trust__item-text {
-  font-size: 0.95rem;
+.trust__list li:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-5px);
+}
+
+.trust__list h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.trust__list p {
   color: #ccc;
+  font-size: 0.95rem;
 }
 
 /* =====================
    PRODUCTS
 ===================== */
 .products {
-  background: #f4f4f4;
+  background: #111;
   padding: 100px 0;
+}
+
+.products__title {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .products__grid {
@@ -182,10 +250,22 @@ body {
 }
 
 .product-card {
-  background: #fff;
+  background: rgba(255,255,255,0.05);
   padding: 36px;
-  border-radius: 4px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .product-card__title {
@@ -194,58 +274,71 @@ body {
 }
 
 .product-card__weight {
-  color: #444;
-  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
 .product-card__button {
   width: 100%;
   padding: 14px;
-  background: #111;
-  color: #fff;
+  background: #C0C0C0;
+  color: #111;
   border: none;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .product-card__button:hover {
-  background: #000;
+  background: #fff;
 }
 
 /* =====================
    FAQ
 ===================== */
 .faq {
-  background: #fff;
+  background: #0A0A0A;
   padding: 100px 0;
 }
 
+.faq__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .faq__item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   padding: 24px 0;
 }
 
 .faq__question {
   font-weight: 500;
+  cursor: pointer;
 }
 
 .faq__answer {
   margin-top: 12px;
-  color: #444;
+  color: #ccc;
+  display: none;
+}
+
+.faq__answer.open {
+  display: block;
 }
 
 /* =====================
-   CTA
+   CTA FINAL
 ===================== */
 .cta {
-  background: #000;
-  color: #fff;
-  text-align: center;
+  background: #111;
   padding: 120px 24px;
+  text-align: center;
 }
 
 .cta__title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 16px;
 }
 
@@ -257,15 +350,16 @@ body {
 
 .cta__button {
   padding: 16px 40px;
-  background: #fff;
-  color: #000;
+  background: #C0C0C0;
+  color: #111;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .cta__button:hover {
-  background: #eaeaea;
+  background: #fff;
 }
 
 /* =====================
@@ -276,6 +370,7 @@ body {
   color: #aaa;
   padding: 40px 24px;
   font-size: 0.85rem;
+  text-align: center;
 }
 
 .footer__nav {
@@ -286,6 +381,7 @@ body {
   color: #aaa;
   margin: 0 8px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer__link:hover {
@@ -295,6 +391,13 @@ body {
 /* =====================
    RESPONSIVO
 ===================== */
+@media (max-width: 900px) {
+  .hero__grid,
+  .product-info__content {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .hero__headline {
     font-size: 2.3rem;
@@ -302,63 +405,5 @@ body {
 
   section {
     padding: 70px 0;
-  }
-}
-/* =====================
-   HERO GRID
-===================== */
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.hero__image img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-}
-
-/* =====================
-   PRODUCT IMAGE BLOCK
-===================== */
-.product-info__content {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.product-info__image img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* =====================
-   PRODUCT CARDS IMAGE
-===================== */
-.product-card img {
-  width: 100%;
-  margin-bottom: 16px;
-  border-radius: 4px;
-}
-
-/* =====================
-   TRUST VISUAL
-===================== */
-.trust__item {
-  background: rgba(255,255,255,0.03);
-  padding: 28px;
-  border-radius: 4px;
-}
-
-/* =====================
-   RESPONSIVO
-===================== */
-@media (max-width: 900px) {
-  .hero__grid,
-  .product-info__content {
-    grid-template-columns: 1fr;
   }
 }
