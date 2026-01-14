@@ -2,7 +2,8 @@
    CONFIGURAÇÕES
 ===================== */
 
-const INSTAGRAM_USER = "primetalmetais";
+// Número do WhatsApp no formato internacional (55 + DDD + número)
+const WHATSAPP_NUMBER = "5521986741890";
 
 /* =====================
    FAQ TOGGLE
@@ -29,7 +30,7 @@ Produto: Prata pura 999 granulada
 Quantidade: ${weight}
     `.trim();
 
-    openInstagramDM(message);
+    openWhatsApp(message);
   });
 });
 
@@ -44,32 +45,15 @@ if (ctaButton) {
 Olá, gostaria de mais informações sobre a prata pura 999 fornecida pela PRIMETAL.
     `.trim();
 
-    openInstagramDM(message);
+    openWhatsApp(message);
   });
 }
 
 /* =====================
-   INSTAGRAM DM
+   FUNÇÃO WHATSAPP
 ===================== */
-function openInstagramDM(message) {
-  copyToClipboard(message);
-
-  // Link atualizado para DM direto
-  const dmUrl = "https://ig.me/m/primetalmetais";
-  window.open(dmUrl, "_blank");
-
-  alert(
-    "Abrimos o Instagram DM.\n\n" +
-    "A mensagem já foi copiada.\n" +
-    "Basta colar e enviar para @primetalmetais."
-  );
-}
-
-/* =====================
-   COPY CLIPBOARD
-===================== */
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).catch(() => {
-    console.warn("Não foi possível copiar automaticamente.");
-  });
+function openWhatsApp(message) {
+  const encodedMessage = encodeURIComponent(message);
+  const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+  window.open(waUrl, "_blank");
 }
